@@ -20,7 +20,7 @@
   {path: '/:id', name: '欢迎', icon: 'smile', component: './Welcome', hideInMenu: true,},
   {path: '/', name: '欢迎', icon: 'smile', component: './Welcome'},
   {path: '/interface/list', name: '接口广场', icon: 'RedditOutlined', component: './InterfaceSquare'},
-  {path: '/recharge/list', icon: "PayCircleOutlined", name: '积分商城', component: './Recharge'},
+  {path: '/recharge/list', icon: "PayCircleOutlined", name: '金币商城', component: './Recharge'},
   {
     path: '/account/center', name: '个人中心', icon: 'UserOutlined', component: './User/UserInfo', hideInMenu: true,
   },
@@ -67,7 +67,15 @@
     name: '订单支付',
     component: './Order/PayOrder',
     hideInMenu: true
-  }, {
+  },
+  {
+    path: '/orderFree/pay/:id',
+    icon: "PayCircleOutlined",
+    name: '0元购☀️',
+    component: './Order/payOrderFree',
+    hideInMenu: true
+  },
+  {
     path: '/order/info/:id', icon: "ProfileOutlined", name: '订单详情', component: './Order/OrderInfo', hideInMenu: true
   },
   {path: '*', layout: false, component: './404'},

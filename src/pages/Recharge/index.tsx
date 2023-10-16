@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Card, message, Spin, Tooltip} from "antd";
 import ProCard, {CheckCard} from "@ant-design/pro-card";
-import KunCoin from "@/components/Icon/KunCoin";
+import VnCoin from "@/components/Icon/VnCoin";
 import {history, useModel} from "@umijs/max";
 import {listProductInfoByPageUsingGET} from "@/services/qiApi-backend/productInfoController";
 import wechat from "../../../public/assets/WeChat.jpg";
@@ -49,11 +49,11 @@ const PayOrder: React.FC = () => {
         <Card style={{minWidth: 360}}>
           <ProCard type={"inner"} headerBordered bordered tooltip={"用于平台接口调用"}
                    title={<strong>我的钱包</strong>}>
-            <strong>坤币 : </strong><span
+            <strong>金币 : </strong><span
             style={{color: "red", fontSize: 18}}>{loginUser?.balance}</span>
           </ProCard>
           <br/>
-          <Card type={"inner"} title={<strong>积分商城 💰️</strong>}>
+          <Card type={"inner"} title={<strong>金币商城 💰️</strong>}>
             <ProCard wrap>
               <CheckCard.Group
                 onChange={(checkedValue) => {
@@ -65,7 +65,7 @@ const PayOrder: React.FC = () => {
                 }}
               >
                 {product && product.map((item) => (
-                  <CheckCard
+                  item.status === 1 && (<CheckCard
                     key={item.id}
                     onClick={() => {
                       setTotal(item.total)
@@ -89,9 +89,10 @@ const PayOrder: React.FC = () => {
                       </>
                     }
                     // @ts-ignore
-                    actions={<><KunCoin></KunCoin></>}
+                    actions={<><VnCoin></VnCoin></>}
                     style={{width: 220, height: 330}}
-                    title={<strong>💰 {item.addPoints} 坤币</strong>} value={item.total}/>
+                    title={<strong>💰 {item.addPoints} 金币</strong>} value={item.total}/>
+                  )
                 ))}
               </CheckCard.Group>
             </ProCard>
@@ -104,7 +105,7 @@ const PayOrder: React.FC = () => {
                 rel="noreferrer"> 用户协议 </a>
           ，如付款成功后10分钟后未到账，请联系站长微信：
              <Tooltip placement="bottom" title={<img src={wechat} alt="微信 code_nav" width="120"/>}>
-               <a>aqimu66</a>
+               <a>17875806323</a>
              </Tooltip>
             </span>
             </ProCard>
@@ -117,14 +118,22 @@ const PayOrder: React.FC = () => {
               </div>
               <Button style={{width: 100, padding: 5}} onClick={() => {
                 if (!productId) {
-                  message.error("请先选择积分规格哦")
+                  message.error("请先选择金币规格哦")
                   return
                 }
                 message.loading("正在前往收银台,请稍后.....", 0.6)
+                // setTimeout的作用是等待800毫秒后，将用户重定向
                 setTimeout(() => {
                   history.push(`/order/pay/${productId}`)
                 }, 800)
               }} size={"large"} type={"primary"}>立即购买</Button>
+              <Button style={{width: 100, padding: 5, marginLeft: 5}} onClick={() => {
+                if (!productId) {
+                  message.error("请先选择金币规格哦")
+                  return
+                }
+                history.push(`/orderFree/pay/${productId}`)
+              }} size={"large"} type={"primary"}>0元购☀️</Button>
             </div>
           </ProCard>
         </Card>

@@ -66,7 +66,7 @@ const UserInfo: React.FC = () => {
     },
     {
       title: '我的钱包',
-      description: <span>这里是您的钱包，坤币用于平台接口的调用费用。<br/>除了充值坤币外，您还可以每日签到或者邀请好友注册来获得坤币</span>,
+      description: <span>这里是您的钱包，金币用于平台接口的调用费用。<br/>除了充值金币外，您还可以每日签到或者邀请好友注册来获得金币</span>,
       target: () => ref2.current,
     },
     {
@@ -358,7 +358,7 @@ const UserInfo: React.FC = () => {
               </Paragraph>
             </div>
             <div>
-              <Tooltip title={"邀请好友注册双方都可获得100积分"}>
+              <Tooltip title={"邀请好友注册双方都可获得100金币"}>
                 <h4>我的邀请码：</h4>
               </Tooltip>
               <Paragraph
@@ -395,7 +395,7 @@ const UserInfo: React.FC = () => {
                    </>
                  }
         >
-          <strong>坤币 💰: </strong> <span
+          <strong>金币 💰: </strong> <span
           style={{color: "red", fontSize: 18}}>{loginUser?.balance}</span>
           <br/>
           <strong>获取更多：</strong>
@@ -419,7 +419,7 @@ const UserInfo: React.FC = () => {
             }, 1000)
           }}>
             <Tooltip title={<>
-              <p>每日签到可获取10积分</p>
+              <p>每日签到可获取10金币</p>
               {/*<p>普通用户上限100</p>*/}
               {/*<p>VPI会员上限1000</p>*/}
             </>}>

@@ -189,9 +189,9 @@ export const InterfaceInfoModalFormColumns: ProFormColumnsType<API.ProductInfo, 
     },
   },
   {
-    title: '扣除积分个数',
+    title: '扣除金币个数',
     dataIndex: 'reduceScore',
-    tooltip: "扣除积分个数",
+    tooltip: "扣除金币个数",
     width: 'lg',
     key: "reduceScore",
     colProps: {
@@ -201,10 +201,10 @@ export const InterfaceInfoModalFormColumns: ProFormColumnsType<API.ProductInfo, 
         () => ({
           validator(_, value) {
             if (!value) {
-              return Promise.reject(new Error("扣除积分个数为必填项"));
+              return Promise.reject(new Error("扣除金币个数为必填项"));
             }
             if (value < 0) {
-              return Promise.reject(new Error("扣除积分个数不能为负数"));
+              return Promise.reject(new Error("扣除金币个数不能为负数"));
             }
             return Promise.resolve();
           },
@@ -317,7 +317,7 @@ const InterfaceInfoColumns: ProColumns<API.InterfaceInfo>[] = [
     key: 'avatarUrl',
   },
   {
-    title: '扣除积分个数',
+    title: '扣除金币个数',
     dataIndex: 'reduceScore',
     valueType: 'text',
     width: 80,

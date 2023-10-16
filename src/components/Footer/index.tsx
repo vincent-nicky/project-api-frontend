@@ -6,7 +6,7 @@ import {Tooltip} from "antd";
 import wechat from '@/../public/assets/WeChat.jpg';
 
 const Footer: React.FC = () => {
-  const defaultMessage = '柒木工作室出品';
+  const defaultMessage = '项目练习';
   const currentYear = new Date().getFullYear();
   return (
     <DefaultFooter
@@ -15,14 +15,15 @@ const Footer: React.FC = () => {
       }}
       // @ts-ignore
       copyright={<>
-        {`${currentYear} ${defaultMessage}`} |{' '}
-        <a target={'_blank'} href={"https://beian.miit.gov.cn/"} rel="noreferrer"> 豫ICP备2023004098号-1</a>
-        {" | "}
-        <a target={'_blank'} href={'https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41172702000163'}
-           rel="noreferrer">
-          <img src="https://img.qimuu.icu/typory/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png"
-               alt={'豫公网安备 41172702000163号'}/> 豫公网安备 41172702000163号
-        </a>
+        {`${currentYear} ${defaultMessage}`}
+        {/*|{' '}*/}
+        {/*<a target={'_blank'} href={"https://beian.miit.gov.cn/"} rel="noreferrer"> 豫ICP备2023004098号-1</a>*/}
+        {/*{" | "}*/}
+        {/*<a target={'_blank'} href={'https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41172702000163'}*/}
+        {/*   rel="noreferrer">*/}
+        {/*  <img src="https://img.qimuu.icu/typory/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png"*/}
+        {/*       alt={'豫公网安备 41172702000163号'}/> 豫公网安备 41172702000163号*/}
+        {/*</a>*/}
 
       </>}
       links={[

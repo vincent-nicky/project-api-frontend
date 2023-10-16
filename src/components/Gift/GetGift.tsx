@@ -44,7 +44,7 @@ const GetGiftModal: React.FC<Props> = (props) => {
             fontWeight: 'bold',
             fontSize: 20,
             color: "red"
-          }}>100积分</p>
+          }}>100金币</p>
         </ProCard>
         <ProCard layout="center">
           <Button size={"large"} style={{marginTop: -30, backgroundColor: "rgba(131,130,255,0.31)"}} onClick={() => {

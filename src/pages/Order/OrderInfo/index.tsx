@@ -157,7 +157,7 @@ export default () => {
         <Descriptions>
           <Descriptions.Item key={"orderName"} label={"订单名称"}>{data?.orderName}</Descriptions.Item>
           <Descriptions.Item key={"total"} label="订单金额 (元)">{data?.total}</Descriptions.Item>
-          <Descriptions.Item key={"addPoints"} label="增加积分数量 (个)">{data?.addPoints}</Descriptions.Item>
+          <Descriptions.Item key={"addPoints"} label="增加金币数量 (个)">{data?.addPoints}</Descriptions.Item>
           <Descriptions.Item key={"payType"} label="支付类型">
             <Tag
               color={orderPayTypeEnum[data?.payType ?? 'default']}>{data?.payType}</Tag>
@@ -175,7 +175,7 @@ export default () => {
           </Descriptions.Item>
           <Descriptions.Item key={"productType"} label="商品类别">
             {data && data.productType === "RECHARGEACTIVITY" && "充值活动"}
-            {data && data.productType === "RECHARGE" && "积分充值"}
+            {data && data.productType === "RECHARGE" && "金币充值"}
             {data && data.productType === "VIP" && "VIP会员"}
           </Descriptions.Item>
           <Descriptions.Item key={"expirationTime"}
@@ -217,7 +217,7 @@ export default () => {
               rel="noreferrer"> 用户协议 </a>
             如付款成功后10分钟后未到账，请联系站长微信：
             <Tooltip placement="bottom" title={<img src={wechat} alt="微信 code_nav" width="120"/>}>
-              <a>aqimu66</a>
+              <a>17875806323</a>
             </Tooltip>
           </span>
       </ProCard>

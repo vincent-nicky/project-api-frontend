@@ -89,9 +89,19 @@ declare namespace API {
     message?: string;
   };
 
+  type closedProductOrderUsingPOST1Params = {
+    /** orderNo */
+    orderNo?: string;
+  };
+
   type closedProductOrderUsingPOSTParams = {
     /** orderNo */
     orderNo?: string;
+  };
+
+  type deleteProductOrderUsingPOST1Params = {
+    /** id */
+    id?: number;
   };
 
   type deleteProductOrderUsingPOSTParams = {
@@ -121,6 +131,11 @@ declare namespace API {
   type getProductInfoByIdUsingGETParams = {
     /** id */
     id?: number;
+  };
+
+  type getProductOrderByIdUsingGET1Params = {
+    /** id */
+    id?: string;
   };
 
   type getProductOrderByIdUsingGETParams = {
@@ -288,6 +303,20 @@ declare namespace API {
     productType?: string;
     sortField?: string;
     sortOrder?: string;
+    total?: number;
+  };
+
+  type listProductOrderByPageUsingGET1Params = {
+    addPoints?: number;
+    current?: number;
+    orderName?: string;
+    orderNo?: string;
+    pageSize?: number;
+    payType?: string;
+    productInfo?: string;
+    sortField?: string;
+    sortOrder?: string;
+    status?: string;
     total?: number;
   };
 

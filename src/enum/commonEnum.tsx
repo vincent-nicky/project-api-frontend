@@ -44,6 +44,6 @@ export const orderPayTypeEnum: any = {
 
 export const productTypeEnum: any = {
   RECHARGEACTIVITY: "充值活动",
-  RECHARGE: "积分充值",
+  RECHARGE: "金币充值",
   VIP:"VIP会员"
 };

@@ -234,7 +234,7 @@ export const UserColumns: ProColumns<API.UserVO>[] = [
     key: 'email',
   },
   {
-    title: '积分',
+    title: '金币',
     dataIndex: 'balance',
     valueType: 'text',
     copyable: true,

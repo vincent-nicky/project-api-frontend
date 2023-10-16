@@ -14,11 +14,11 @@ export const Docs = () => {
     <span
       className="anticon"
       style={{fontSize: 14, fontWeight: "bold"}}
-      onClick={() => {
-        window.open('https://doc.qimuu.icu', '_blank')
-      }}
+      // onClick={() => {
+      //   window.open('https://doc.qimuu.icu', '_blank')
+      // }}
     >
-        📘 开发者文档
+        📘 开发者文档（暂未开发）
     </span>
   );
 };

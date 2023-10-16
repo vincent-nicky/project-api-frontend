@@ -191,7 +191,7 @@ const InterfaceInfo: React.FC = () => {
         <Descriptions>
           <Descriptions.Item key={"url"} label={"接口地址"}><Paragraph copyable>{data?.url}</Paragraph></Descriptions.Item>
           <Descriptions.Item key={"returnFormat"} label="返回格式">{data?.returnFormat ?? "JSON"}</Descriptions.Item>
-          <Descriptions.Item key={"reduceScore"} label="消费积分">{data?.reduceScore}个</Descriptions.Item>
+          <Descriptions.Item key={"reduceScore"} label="消费金币">{data?.reduceScore}个</Descriptions.Item>
           <Descriptions.Item key={"request"} label="请求方式"> <Tag
             color={InterfaceRequestMethodEnum[data?.method ?? 'default']}>{data?.method}</Tag></Descriptions.Item>
           <Descriptions.Item key={"totalInvokes"} label="调用总次数">{totalInvokes}次</Descriptions.Item>
@@ -217,9 +217,14 @@ const InterfaceInfo: React.FC = () => {
       </Card>
       <Card>
         <p className="highlightLine">接口详细描述请前往开发者在线文档查看：</p>
-        <a href={`${docUrl}/pages/${data?.id}/#${data?.name}`} target={"_blank"} rel="noreferrer">📘
-          接口在线文档：{data?.name}</a>
+
+        {/*<a href={`${docUrl}/pages/${data?.id}/#${data?.name}`} target={"_blank"} rel="noreferrer">📘*/}
+        {/*  接口在线文档：{data?.name}</a>*/}
+
+        <a target={"_blank"} rel="noreferrer">📘
+          接口在线文档：{data?.name}（暂未开发）</a>
       </Card>
+
       <br/>
       <Card
         style={{width: '100%'}}
@@ -244,6 +249,7 @@ const InterfaceInfo: React.FC = () => {
         </Button>
       </ProCard>)}
     </Spin>
+
   )
 }
 

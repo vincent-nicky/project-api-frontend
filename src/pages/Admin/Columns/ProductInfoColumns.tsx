@@ -35,7 +35,7 @@ export const ProductInfoModalFormColumns: ProFormColumnsType<API.ProductInfo, "t
         text: 'VIP会员',
       },
       RECHARGE: {
-        text: '积分充值',
+        text: '金币充值',
       },
       RECHARGEACTIVITY: {
         text: "充值活动"
@@ -43,8 +43,8 @@ export const ProductInfoModalFormColumns: ProFormColumnsType<API.ProductInfo, "t
     }
   },
   {
-    tooltip: "本商品购买后增加的积分数",
-    title: '增加积分数 (单位：个)',
+    tooltip: "本商品购买后增加的金币数",
+    title: '增加金币数 (单位：个)',
     dataIndex: 'addPoints',
     key: "addPoints",
     formItemProps: {
@@ -52,10 +52,10 @@ export const ProductInfoModalFormColumns: ProFormColumnsType<API.ProductInfo, "t
         () => ({
           validator(_, value) {
             if (!value) {
-              return Promise.reject(new Error("增加积分数为必填项"));
+              return Promise.reject(new Error("增加金币数为必填项"));
             }
             if (value < 0) {
-              return Promise.reject(new Error("增加积分数不能为负数"));
+              return Promise.reject(new Error("增加金币数不能为负数"));
             }
             return Promise.resolve();
           },
@@ -125,7 +125,7 @@ export const ProductInfoColumns: ProColumns<API.ProductInfo>[] = [
     key: 'total',
   },
   {
-    title: '增加积分数 (个)',
+    title: '增加金币数 (个)',
     dataIndex: 'addPoints',
     valueType: 'text',
     key: 'addPoints',
@@ -171,7 +171,7 @@ export const ProductInfoColumns: ProColumns<API.ProductInfo>[] = [
         text: 'VIP会员',
       },
       RECHARGE: {
-        text: '积分充值',
+        text: '金币充值',
       },
       RECHARGEACTIVITY: {
         text: "充值活动"

@@ -6,6 +6,7 @@ import * as dailyCheckInController from './dailyCheckInController';
 import * as fileController from './fileController';
 import * as interfaceInfoController from './interfaceInfoController';
 import * as orderController from './orderController';
+import * as orderFreeController from './orderFreeController';
 import * as productInfoController from './productInfoController';
 import * as userController from './userController';
 export default {
@@ -13,6 +14,7 @@ export default {
   fileController,
   interfaceInfoController,
   orderController,
+  orderFreeController,
   productInfoController,
   userController,
 };

@@ -67,7 +67,7 @@ export const OrderColumns: ProColumns<API.ProductOrderVo>[] = [
         text: 'VIP会员',
       },
       RECHARGE: {
-        text: '积分充值',
+        text: '金币充值',
       },
       RECHARGEACTIVITY: {
         text: "充值活动"
@@ -97,7 +97,7 @@ export const OrderColumns: ProColumns<API.ProductOrderVo>[] = [
     sorter: (a, b) => a.total - b.total,
   },
   {
-    title: '增加积分数',
+    title: '增加金币数',
     dataIndex: 'addPoints',
     width: "sm",
     key: 'addPoints',
