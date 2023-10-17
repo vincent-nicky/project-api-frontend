@@ -99,14 +99,9 @@ declare namespace API {
     orderNo?: string;
   };
 
-  type deleteProductOrderUsingPOST1Params = {
-    /** id */
-    id?: number;
-  };
-
   type deleteProductOrderUsingPOSTParams = {
     /** id */
-    id?: number;
+    id?: string;
   };
 
   type DeleteRequest = {
@@ -553,6 +548,7 @@ declare namespace API {
   };
 
   type UserUpdateRequest = {
+    avatarHash?: string;
     balance?: number;
     gender?: string;
     id?: number;
@@ -566,6 +562,7 @@ declare namespace API {
 
   type UserVO = {
     accessKey?: string;
+    avatarHash?: string;
     balance?: number;
     createTime?: string;
     email?: string;

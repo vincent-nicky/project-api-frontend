@@ -208,10 +208,17 @@ const UserInfo: React.FC = () => {
   const props: UploadProps = {
     name: 'file',
     withCredentials: true,
-    action: `${requestConfig.baseURL}api/file/upload?biz=user_avatar`,
+    // 文件上传
+    // action: `${requestConfig.baseURL}api/file/upload?biz=user_avatar`,
+    action: `${requestConfig.baseURL}api/user/update/avatar`,
     onChange: async function ({file, fileList: newFileList}) {
       const {response} = file;
       if (file.response && response.data) {
+
+        loginUser!.userAvatar = response.data.url;
+        setInitialState({loginUser: loginUser, settings: Settings})
+        message.success("头像修改成功")
+
         const {data: {status, url}} = response
         const updatedFileList = [...fileList];
         if (response.code !== 0 || status === 'error') {

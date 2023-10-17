@@ -32,21 +32,6 @@ export async function createOrderUsingPOST1(
   });
 }
 
-/** deleteProductOrder POST /api/order/free/delete */
-export async function deleteProductOrderUsingPOST1(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
-  params: API.deleteProductOrderUsingPOST1Params,
-  options?: { [key: string]: any },
-) {
-  return request<API.BaseResponseboolean>('/api/order/free/delete', {
-    method: 'POST',
-    params: {
-      ...params,
-    },
-    ...(options || {}),
-  });
-}
-
 /** getProductOrderById GET /api/order/free/get */
 export async function getProductOrderByIdUsingGET1(
   // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
